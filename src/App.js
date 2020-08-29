@@ -38,7 +38,7 @@ class App extends React.Component {
     }
 
     this.setState({ plainText: symbollessString });
-    this.setState({ cipherText: Rotor.revEncoder(Rotor.revEncoder(Rotor.revEncoder(Rotor.reflectorEncoder(Rotor.encoder(Rotor.encoder(Rotor.encoder(this.state.plainText, slowRotor), medRotor), fastRotor)), slowRotor), medRotor), fastRotor) });
+    this.setState({ cipherText: Rotor.revEncoder(Rotor.revEncoder(Rotor.revEncoder(Rotor.reflectorEncoder(Rotor.encoder(Rotor.encoder(Rotor.encoder(this.state.plainText, slowRotor), medRotor), fastRotor)), fastRotor), medRotor), slowRotor) });
   }
 
   handleCoverClick = () => {
@@ -53,12 +53,24 @@ class App extends React.Component {
     this.setState({ page: 'home' });
   }
 
+  textSubmit = (e) => {
+     let input = document.getElementById('input');
+    // let symbollessString = '';
+
+    // for(var i = 0; i < input.value; i++) {
+    //   if (this.isLetter(input.value.charAt(i))) symbollessString = symbollessString + e.target.value.charAt(i);
+    // }
+
+    this.setState({ plainText: input.value });
+    this.setState({ cipherText: Rotor.revEncoder(Rotor.revEncoder(Rotor.revEncoder(Rotor.reflectorEncoder(Rotor.encoder(Rotor.encoder(Rotor.encoder(this.state.plainText, slowRotor), medRotor), fastRotor)), slowRotor), medRotor), fastRotor) });
+  }
+
   pageSelect = () => {
     switch(this.state.page) {
       case 'cover':
         return <Cover onCoverClick={this.handleCoverClick} onResearchClick={this.handleResearchClick}/>
       case 'home':
-        return <Home handleTextChange={this.handleTextChange} cipherText={this.state.cipherText} />
+        return <Home handleTextChange={this.handleTextChange} cipherText={this.state.cipherText} textSubmit={this.textSubmit} />
       case 'research':
         return <Research enigmaClick={this.handleEnigmaClick} />
       default:

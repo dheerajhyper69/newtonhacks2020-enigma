@@ -1,68 +1,29 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# NewtonHACKS 2020
 
-## Available Scripts
+## The Turing Point Project
+[Try it out here](https://dheerajhyper69.github.io/newtonhacks2020-enigma)
 
-In the project directory, you can run:
+Inspired by our love for cryptography, math, and computer science, we decided to challenge ourselves and code the Enigma Machine.
 
-### `npm start`
+### Inspiration
+Cryptography has always been an interest for us (Dom - theoretical math, Dheeraj - practicality, Ismayil - networking). We decided to combine all our interests into something that is applicable but new for us. 
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### What it does & How we built it
+On our website, there is a lesson page with resources and our interactive Enigma. We used React to code our project. Coding the Enigma Machine was definitely a challenge as majority of us never used React before. In 8 hours, we learned the importance of planning and brainstorming, realized the beauty of the Enigma Machine, and had a lot of fun learning together.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+### Challenges We Ran Into & Accomplishments
+There were many challenges we faced from rotors not shifting to the plugboard that we didn't get working in the end. Our proudest moment though was when we finally got the rotors to shift after every letter. When we typed "hello" for the first time and we saw that "ll" were two different letters felt like the sun shining after a rainstorm : 
 
-### `npm test`
+### Application
+We wanted to design our project as a virtual lesson, with research and pictures to engage people and their interests in cryptography. Our website could be used in classrooms or at home to help students (and everybody) experience the mystery of what seemed like an impossible and unbreakable machine. 
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Future Plans 
+There was a lot of things we wanted to add that we didn't have enough time for! 
+  - **Sorting out the kinks in the rotors**: We faced mountains of obstacles trying to code the rotors. The constant shifting, the three rotors, and the reflector were just some issues we had and wish to improve upon. 
+  - **Parts of the Enigma**: There are parts of the military grade Enigma we did not have time to add such as multiple rotors and different starting positions 
+  - **User Interface**: As an interactive lesson, we would like to add more interactive parts and make the lesson more accessible for everyone. 
+  - **Integration**: We would love to implement our project in our schools and spread the word about the Enigma. The Enigma was and is a great introduction that inspired us to learn more about cryptography. We hope to spread the word about cryptography and possibly create more lessons about cybersecurity. 
+  - **Fun Parts**: If we had time (which we didn't), we wanted to include a secret puzzle hunt throughout the lesson. There would be word puzzles, imbedded codes, and a chance to use the Enigma for something fun!   
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+### Final Takeaways 
+In the end, we couldn't finish our project in time but we came to terms with that at 6:15 and we had to submit our code. Learning React in less than a week was thrilling and reading about the Enigma was both intriguing and fascinating. This was the first hackathon all of us attended and we had a great time collaborating together. We are definitely going to join more hackathons in the future!

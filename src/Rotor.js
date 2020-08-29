@@ -26,12 +26,13 @@ export default class Rotor {
           }
         // takes the letter in the array corresponding to the plaintext
         encoded_word += rotor[num - 65]; 
+
+        var tempLet = rotor.shift();
+        rotor.push(tempLet);
         
       }
-      // var tempLet = rotor.shift();
-      //   rotor.push(tempLet);
 
-     return encoded_word.substring(1, encoded_word.length).replaceAll('NWKSFUWSK', '').replaceAll('undefined', '');
+     return encoded_word.substring(1, encoded_word.length).split('NWKSFUWSK').join('').split('undefined').join('');
     }
 
     static reflectorEncoder = (plaintext) => { 
@@ -51,7 +52,7 @@ export default class Rotor {
         
       }
 
-     return encoded_word.substring(1, encoded_word.length).replaceAll('NWKSFUWSK', '').replaceAll('undefined', '');
+      return encoded_word.substring(1, encoded_word.length).split('NWKSFUWSK').join('').split('undefined').join('');
     }
 
     static revEncoder = (plaintext, rotor) => { 
@@ -72,12 +73,9 @@ export default class Rotor {
         
         // takes the letter in the array corresponding to the plaintext
         encoded_word += alpha[num];
-        num = 0;
       }
-      // var tempLet = rotor.shift();
-      //   rotor.push(tempLet);
 
-     return encoded_word.substring(1, encoded_word.length).replaceAll('AUU', '').replaceAll('undefined', '');
+      return encoded_word.substring(1, encoded_word.length).split('NWKSFUWSK').join('').split('undefined').join('');
     }
 
 

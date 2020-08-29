@@ -5,7 +5,7 @@ class Plugboard {
 
   firstLet = ""; 
   newLet= ""; 
-  for (i = 0, i < plugInput.length, i++) {
+  for (var i = 0; i < plugInput.length; i++) {
     // testing if the letter typed matches any plugboard 
     if (firstLet === plugInput[i]){
         newLet = plugOutput[i]; 
