@@ -6,6 +6,8 @@ const medRotor = ["A", "J", "D", "K", "S", "I", "R", "U", "X", "B", "L", "H", "W
 
 const fastRotor = ["E", "K", "M", "F","L", "G", "D", "Q", "V", "Z", "N", "T", "O", "W", "Y", "H", "X", "U", "S", "P", "A", "I", "B", "R", "C", "J"];
 
+const alpha = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]; 
+
 
 // Reflector needed to return the ciphertext back through the three rotors
 const reflector = ["F", "V", "P", "J", "I", "A", "O", "Y", "E", "D", "R", "Z", "X", "W", "G", "C", "T", "K", "U", "Q", "S", "B", "N", "M", "H", "L"];
@@ -50,6 +52,32 @@ export default class Rotor {
       }
 
      return encoded_word.substring(1, encoded_word.length).replaceAll('NWKSFUWSK', '').replaceAll('undefined', '');
+    }
+
+    static revEncoder = (plaintext, rotor) => { 
+      let cipher = plaintext.toUpperCase();
+      let num = 0;
+      let encoded_word = " ";
+
+      for (var d = 0; d < cipher.length; d++ ){
+        for (var i = 0; i <rotor.length; i++){
+          if (cipher.charAt(d) === rotor[i]){
+            num = i;
+          }
+        }
+
+        if (cipher.charAt(d) === " ") {
+          encoded_word = encoded_word + " ";
+        }
+        
+        // takes the letter in the array corresponding to the plaintext
+        encoded_word += alpha[num];
+        num = 0;
+      }
+      // var tempLet = rotor.shift();
+      //   rotor.push(tempLet);
+
+     return encoded_word.substring(1, encoded_word.length).replaceAll('AUU', '').replaceAll('undefined', '');
     }
 
 

@@ -1,0 +1,56 @@
+html, .center {
+  margin-top: 100px;
+  background-color: #050910;
+  font-family: 'Source Code Pro', monospace;
+  color: white;
+}
+
+
+h1 {
+  text-align: center;
+  color: white;
+  font-size: 10px;
+
+}
+
+img {
+  display:flex;
+  height: 20em;
+  width: 30em;
+  padding: 15px;
+}
+
+p {
+  margin-top: 150px;
+  line-height: 1.5;
+  font-family: 'Source Code Pro', monospace;
+  color: white;
+  padding-left: 15em;
+  padding-right: 15em;
+}
+
+.center {
+  
+  text-align: center;
+}
+
+
+#button {
+  margin: 2em;
+  text-align: center;
+  color: white;
+  border: white;
+  bottom: 0;
+  transition: all 2s;
+}
+
+#button:hover {
+  margin-top: 2em;
+  font-size: 15px;
+  background-color: #F1C47B; 
+  
+}
+
+#click {
+  color: #040809;
+}

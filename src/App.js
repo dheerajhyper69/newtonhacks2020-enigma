@@ -2,6 +2,13 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Rotor from './Rotor';
+import Navbar from 'react-bootstrap/Navbar';
+import Nav from 'react-bootstrap/Nav';
+
+// pages
+import Cover from './components/pages/Cover';
+import Home from './components/pages/Home';
+import Research from './components/pages/Research';
 
 const slowRotor = ["B", "D", "F", "H", "J", "L", "C", "P","R", "T", "X", "V", "Z","N", "Y", "E", "I", "W", "G", "A", "K", "M", "U", "S", "Q", "O"];
 
@@ -13,7 +20,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      page: 'home',
+      page: 'cover',
       plainText: '',
       
     };
@@ -31,19 +38,44 @@ class App extends React.Component {
     }
 
     this.setState({ plainText: symbollessString });
-    this.setState({ cipherText: Rotor.encoder(Rotor.encoder(Rotor.encoder(Rotor.reflectorEncoder(Rotor.encoder(Rotor.encoder(Rotor.encoder(this.state.plainText, slowRotor), medRotor), fastRotor)), slowRotor), medRotor), fastRotor) });
+    this.setState({ cipherText: Rotor.revEncoder(Rotor.revEncoder(Rotor.revEncoder(Rotor.reflectorEncoder(Rotor.encoder(Rotor.encoder(Rotor.encoder(this.state.plainText, slowRotor), medRotor), fastRotor)), slowRotor), medRotor), fastRotor) });
   }
 
-  render() {
-      return (
-        <div className="App">
-          <p> Play around with the Enigma and see what you can come up with! </p>
-          <input onChange={this.handleTextChange} placeholder="Enter plaintext here..."/>
-          <p>{this.state.cipherText}</p>
-          <footer>*press space at the end of your string*</footer>
-        </div>
-      );
+  handleCoverClick = () => {
+    this.setState({ page: 'home' });
+  }
+
+  handleResearchClick = () => {
+    this.setState({ page: 'research' });
+  }
+
+  handleEnigmaClick = () => {
+    this.setState({ page: 'home' });
+  }
+
+  pageSelect = () => {
+    switch(this.state.page) {
+      case 'cover':
+        return <Cover onCoverClick={this.handleCoverClick} onResearchClick={this.handleResearchClick}/>
+      case 'home':
+        return <Home handleTextChange={this.handleTextChange} cipherText={this.state.cipherText} />
+      case 'research':
+        return <Research enigmaClick={this.handleEnigmaClick} />
+      default:
+        return <p>Error</p>
     }
   }
-
+  render() {
+    return(
+      <div>
+         {/*} <Navbar>
+           <Nav>
+           
+           </Nav>
+         </Navbar> */}
+        {this.pageSelect()}
+      </div>  
+    );
+  }
+}
 export default App;
