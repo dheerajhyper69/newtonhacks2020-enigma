@@ -1,12 +1,11 @@
 # NewtonHACKS 2020
 
 ## The Turing Point Project
-[Try it out here](https://dheerajhyper69.github.io/newtonhacks2020-enigma)
 
 Inspired by our love for cryptography, math, and computer science, we decided to challenge ourselves and code the Enigma Machine.
 
 ### Inspiration
-Cryptography has always been an interest for us (Dom - theoretical math, Dheeraj - practicality, Ismayil - networking). We decided to combine all our interests into something that is applicable but new for us. 
+Cryptography has always been an interest for us. We decided to combine all our interests into something that is applicable but new for us. 
 
 ### What it does & How we built it
 On our website, there is a lesson page with resources and our interactive Enigma. We used React to code our project. Coding the Enigma Machine was definitely a challenge as majority of us never used React before. In 8 hours, we learned the importance of planning and brainstorming, realized the beauty of the Enigma Machine, and had a lot of fun learning together.
