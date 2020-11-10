@@ -1,3 +1,4 @@
+# THIS REPO IS ARCHIVED.
 # NewtonHACKS 2020
 
 ## The Turing Point Project
